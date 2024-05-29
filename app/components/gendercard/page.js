@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 
 const GenderCard = (props) => {
