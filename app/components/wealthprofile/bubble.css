@@ -1,0 +1,40 @@
+/* (A) SPEECH BOX */
+.speech {
+  /* (A1) FONT & COLORS */
+  
+  color: #fff;
+  background-color: #40444d;
+
+  /* (A2) DIMENSIONS */
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+/* (B) USE ::AFTER TO CREATE THE "CALLOUT" */
+.speech::after {
+  display: block;
+  width: 0;
+  content: "";
+  border: 15px solid transparent;
+}
+
+/* (C) "CALLOUT" DIRECTIONS */
+
+.speech.down::after {
+  border-top-color: #40444d;
+  border-bottom: 0;
+}
+
+/* (D) POSITION THE CALLOUT */
+.speech {
+  position: relative;
+  margin: 30px;
+}
+.speech::after {
+  position: absolute;
+}
+.speech.down::after {
+  bottom: -15px;
+  left: calc(50% - 15px);
+}
